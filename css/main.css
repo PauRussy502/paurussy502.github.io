@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "3270 Nerd Font Mono";
+    src: url(/font/3270NerdFontMono-Regular.ttf);
+}
+
+*{
+    color: white;
+    font-size: 18px;
+}
+
+body{
+    background-color: rgb(26, 26, 26);
+}
+
+.header, .terminal{
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.terminal{
+    background-color: black;
+    font-family: "3270 Nerd Font Mono";
+    border-radius: 15px;
+    box-shadow: 5px -5px 10px rgb(80, 80, 80);
+}
+
+.hidden {
+    opacity:0;
+}
+
+.menu{
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 50px;
+    text-justify: center;
+}
+
+.menutext{
+    display: block;
+    font-family: "3270 Nerd Font Mono";
+    text-decoration: none;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 10pxs;
+    transition: 0.5s;
+}
+
+.menutext:hover{
+    color: red;
+    text-shadow: 0px 0px 10px rgb(255, 70, 70);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.inprogress{
+    opacity: 0.5;
+}

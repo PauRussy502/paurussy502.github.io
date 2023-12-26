@@ -1,0 +1,23 @@
+.console-container {
+    font-family:"3270 Nerd Font Mono";
+    display: flex;
+    height: 50px;
+    color:white;
+    margin:auto;
+    background-color: black;
+    align-items: center;
+    border-radius: 5px;
+    font-size: 4em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.console-underscore{
+    display:inline-block;
+    position:relative;
+    top:-0.14em;
+    left:10px;
+}
