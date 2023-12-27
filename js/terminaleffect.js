@@ -13,17 +13,29 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   }
 
+  function mezclarVariables(nwords, ncolors) {
+    var indices = Array.from({ length: nwords.length }, (_, i) => i);
+    for (var i = indices.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        [indices[i], indices[j]] = [indices[j], indices[i]];
+    }
+    var words = indices.map(i => nwords[i]);
+    var colors = indices.map(i => ncolors[i]);
+    return { words, colors };
+  }
+
   loadJSON("/js/terminaleffect.json")
     .then(jsonData => {
       if (jsonData) {
-        var words = jsonData.consoleTextData.messages;
-        var colors = jsonData.consoleTextData.colors;
-        var id = 'terminaleffect'
+        var nwords = jsonData.consoleTextData.messages;
+        var ncolors = jsonData.consoleTextData.colors;
+        var id = 'terminaleffect';
+        var { words, colors } = mezclarVariables(nwords, ncolors);
         consoleText(words, id, colors);
       }
     });
 
-function consoleText(words, id, colors) {
+  function consoleText(words, id, colors) {
     if (colors === undefined) colors = ['#fff'];
     var visible = true;
     var con = document.getElementById('console');
@@ -38,36 +50,36 @@ function consoleText(words, id, colors) {
       window.setInterval(function() {
         if (letterCount === 0 && waiting === false) {
           waiting = true;
-          target.innerHTML = words[0].substring(0, letterCount)
+          target.innerHTML = words[0].substring(0, letterCount);
           window.setTimeout(function() {
             var usedColor = colors.shift();
             colors.push(usedColor);
             var usedWord = words.shift();
             words.push(usedWord);
             x = 1;
-            target.setAttribute('style', 'color:' + colors[0])
+            target.setAttribute('style', 'color:' + colors[0]);
             letterCount += x;
             waiting = false;
-          }, 1000)
+          }, 1000);
         } else if (letterCount === words[0].length + 1 && waiting === false) {
           waiting = true;
           window.setTimeout(function() {
             x = -1;
             letterCount += x;
             waiting = false;
-          }, 1000)
+          }, 1000);
         } else if (waiting === false) {
-          target.innerHTML = words[0].substring(0, letterCount)
+          target.innerHTML = words[0].substring(0, letterCount);
           letterCount += x;
         }
       }, 120);
   
       window.setInterval(function() {
         if (visible === true) {
-          con.className = 'console-underscore hidden'
+          con.className = 'console-underscore hidden';
           visible = false;
         } else {
-          con.className = 'console-underscore'
+          con.className = 'console-underscore';
           visible = true;
         }
       }, 400);
