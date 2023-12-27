@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>RU$$Y iTerminal</title>
+
+    <script src="/js/iTerminal.js"></script>
+    <script src="/js/iTerminal_min.js"></script>
+    <link rel="stylesheet" href="/css/iTerminal.css"/>
+</head>
+<body>
+    <script>
+        $('body').terminal({
+            help: function() {
+                this.echo('whoami => Prints a portfolio');
+                this.echo('smedia => Why do you want to know my networks? ;)');
+                this.echo('\n');
+            },
+
+            whoami: function() {
+                this.echo('Hi, I am a young man passionate about cybersecurity, I am focused on getting certified in OSINT and eJPT.');
+                this.echo('\n');
+            },
+
+            smedia: function() {
+                this.echo('github \t\t=>\t\t https://github.com/PauRussy502');
+                this.echo('discord \t=>\t\t paurussy502');
+                this.echo('\n');
+            }
+        }, {
+            greetings: 'Hi User!!\nI\u0027m russy\u0027s assistant who is busy right now. How can I help you?\n\nUse the "help" command to display the help panel.\n'
+        });
+        </script>
+</body>
+</html>
