@@ -1,3 +1,9 @@
+@media screen and (max-width: 800px) {
+    .terminaleffect, .console-prefix{
+        font-size: 0.75em;
+        }
+}
+
 .console-container {
     font-family:"3270 Nerd Font Mono";
     display: flex;
@@ -7,7 +13,7 @@
     background-color: black;
     align-items: center;
     border-radius: 5px;
-    font-size: 4em;
+    font-size: 25px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
