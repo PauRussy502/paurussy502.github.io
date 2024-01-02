@@ -3,15 +3,18 @@
     src: url(/font/3270NerdFontMono-Regular.ttf);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .goals{
         margin-left: auto;
         margin-right: auto;
         width: fit-content;
     }
+    .inprogress{
+        font-size: 0.75em;
+    }
   }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .news, .goals{
     margin-left: auto;
     margin-right: auto;
@@ -49,6 +52,7 @@ hr{
     width: fit-content;
     height: fit-content;
     margin-top: 50px;
+    margin-bottom: 50px;
     text-justify: center;
 }
 
@@ -61,14 +65,16 @@ a{
     color: white;
 }
 
-.menutext{
+.menutext, .inprogress{
     display: block;
     font-family: "3270 Nerd Font Mono";
     height: fit-content;
     width: fit-content;
-    margin-bottom: 25px;
-    font-size: 25px;
     transition: 0.5s;
+}
+
+.menutext{
+    font-size: 25px;
 }
 
 .menutext:hover, a:hover{
@@ -81,6 +87,8 @@ ul {
 }
 
 .inprogress, .inprogress:hover{
+    color: white;
+    text-shadow: none;
     opacity: 0.5;
     font-size: 18px;
 }
