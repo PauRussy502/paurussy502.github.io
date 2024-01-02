@@ -9,17 +9,35 @@
         margin-right: auto;
         width: fit-content;
     }
+    .cve{
+        margin-left: 20px;
+        margin-right: 15px;
+        text-align: left;
+    }
+
+    .cvedesc{
+        display: none;
+    }
+
     .inprogress{
         font-size: 0.75em;
     }
   }
 
 @media screen and (min-width: 1000px) {
-  .news, .goals{
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
-  }
+    .cve, .goals{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cve{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+
+    .cvedesc{
+        text-align: justify;
+    }
 }
 
 
@@ -96,4 +114,11 @@ ul {
 .icon{
     font-weight: 100;
     font-size: 28px;
+}
+
+.cve, .goals{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
