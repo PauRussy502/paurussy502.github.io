@@ -7,30 +7,35 @@
 
     <title>RU$$Y HOME PAGE</title>
 
+    <!--CSS-->
     <link rel='stylesheet' type='text/css' media='screen' href='/css/main.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/terminaleffect.css'>
+
+    <!--JS-->
     <script src='/js/terminaleffect.js'></script>
+    <script src="https://unpkg.com/akar-icons-fonts"></script>
 </head>
 <body>
-    <!--TERMINAL EFFECT-->
+       <!--TERMINAL EFFECT-->
     <div class="console-container"><span class="console-prefix">RU$$Y@root =>&nbsp;</span><span class="console-prefix-mb">RU$$Y =>&nbsp;</span><span class="terminaleffect" id="terminaleffect"></span><div class="console-underscore" id="console">&#95;</div></div>
     
     <!--MENU-->
     <div class="menu">
-        <a href="iTerminal.html" class="menutext">Interactive Terminal</a><span class="inprogress">SOON MORE CMDs</span><br>
-        <a href="#" class="menutext">My Flipper Files</a><span class="inprogress">SOON ONLINE</span>
+        <a href="#" class="menutext">Interactive Terminal</a><span class="context">SOON ONLINE</span><br>
+
+        <a href="#" class="menutext">My Flipper Files</a><span class="context">SOON ONLINE</span>
     </div>
 
     <!--GOALS-->
-    <hr><h3 class="header"><span class="icon">󱤧</span> 2024 Goals</h3>
-    <div class="goals">
+    <hr><h3 class="header" onclick="toggleMenu('goals')"><span class="icon">󱤧</span> 2024 Goals <i id="menuicongoals" class="ai-chevron-up"></i></h3>
+    <div id="goals" class="goals">
         <p><a href="https://security.ine.com/certifications/ejpt-certification/"> eJpt</a></p>
         <p> A1 licence</p>
     </div>
 
     <!--CVE-->
-    <hr><h3 class="header"><span class="icon"></span> Last CVE</h3>
-    <div class="cve">
+    
+    <hr><h3 class="header" onclick="toggleMenu('cvemenu')"><span class="icon"></span> Last CVE <i id="menuiconcve" class="ai-chevron-up"></i></h3>
+    <div id="cvemenu" class="cve">
         <h3 class="cvetitle" style="color: #ff1900;">CRITICAL!!</h3>
         <div id="critical-cve"></div><br><br>
 
@@ -39,8 +44,10 @@
 
         <h3 class="cvetitle" style="color: #f39c12;">MEDIUM</h3>
         <div id="medium-cve"></div><br><br>
-
-        <script src="js/last_cve.js"></script>
     </div>
-</body>
+    <!--END-->
+    
+    <script src="js/last_cve.js"></script>
+    <script src="js/dropmenu.js"></script>
+<body>
 </html>
