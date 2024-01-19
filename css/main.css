@@ -19,15 +19,14 @@
     .goals{
         margin-left: auto;
         margin-right: auto;
-        width: fit-content;
+        text-align: center;
     }
 
-    .cve{
+    .cve, .news{
         margin-left: 20px;
     }
 
-
-    .cvedesc{
+    .cvedesc, .newsdesc{
         display: none;
     }
 
@@ -36,23 +35,22 @@
     }
   }
 
+  
 @media screen and (min-width: 1000px) {    
     .console-prefix-mb{
         display: none;
     }
     
-    .cve, .goals{
+    .dropmenu{
         margin-left: auto;
         margin-right: auto;
+
     }
 
-    .cve{
-        margin-left: 100px;
-        margin-right: 100px;
-    }
-
-    .cvedesc{
+    .cvedesc, .newsdesc{
+        display: block;
         text-align: justify;
+        line-height: 25px;
     }
 
     .cvedescmb{
@@ -138,20 +136,22 @@ ul {
     font-size: 1.3rem;
 }
 
-.cve, .goals {
+.dropmenu {
     width: fit-content;
+    margin: 20px;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 2s ease-in-out;
 }
 
-.cve.active, .goals.active {
+.dropmenu.active {
     width: fit-content;
+    margin-left: 20px;
     max-height: 5000px;
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
 }
 
 .noplinebreak{
@@ -178,4 +178,9 @@ ul {
     position: relative;
     top: -0.14em;
     left: 10px;
+}
+
+.goals, .goals.active {
+    margin-left: auto;
+    margin-right: auto;
 }

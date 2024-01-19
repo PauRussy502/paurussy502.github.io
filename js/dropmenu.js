@@ -2,6 +2,7 @@ function toggleMenu(menuId) {
     var menu = document.getElementById(menuId);
     var icongoals = document.getElementById('menuicongoals');
     var iconcve = document.getElementById('menuiconcve');
+    var iconnews = document.getElementById('menuiconnews');
     menu.classList.toggle('active');
 
     if (menu.classList.contains('active')) {
@@ -11,7 +12,10 @@ function toggleMenu(menuId) {
             toggleIcon(icongoals, 'ai-chevron-down', 'ai-chevron-up');
         } else if (menuId === 'cvemenu') {
             toggleIcon(iconcve, 'ai-chevron-down', 'ai-chevron-up');
+        } else if (menuId === 'newsmenu') {
+            toggleIcon(iconnews, 'ai-chevron-down', 'ai-chevron-up');
         }
+
     } else {
         menu.style.maxHeight = "0";
 
@@ -19,6 +23,8 @@ function toggleMenu(menuId) {
             toggleIcon(icongoals, 'ai-chevron-up', 'ai-chevron-down');
         } else if (menuId === 'cvemenu') {
             toggleIcon(iconcve, 'ai-chevron-up', 'ai-chevron-down');
+        } else if (menuId === 'newsmenu') {
+            toggleIcon(iconnews, 'ai-chevron-up', 'ai-chevron-down');
         }
     }
 }
