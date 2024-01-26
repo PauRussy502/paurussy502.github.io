@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>RU$$Y iTerminal</title>
+
+    <script src="/js/iTerminal.js"></script>
+    <script src="/js/iTerminal_min.js"></script>
+    <script src="/js/yearsold.js"></script>
+    <link rel="stylesheet" href="/css/iTerminal.css"/>
+</head>
+<body>
+    <script>
+        $('body').terminal({
+            
+            
+            help: function() {
+                this.echo('\n');
+                this.echo('\t\t\t' + '[[buo;#ffd57a;]' + '| HELP? |' + ']\n')
+                this.echo('[[u;#16c2f7;]' + '🛈 ' + ']' + '[[bu;#16c2f7;]' + 'INFO' + ']\n')
+                this.echo('[[;white;]' + 'whoami' + ']\t\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;#16c2f7;]' + 'Displays personal info' + '] ');
+                this.echo('[[;white;]' + 'language' + ']\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;#16c2f7;]' + 'Prints most used languages in Github' + '] ');
+                this.echo('\n');
+                this.echo('[[u;#e71ebe;]' + '⌬ ' + ']' + '[[bu;#e71ebe;]' + 'MISC / FUN' + ']\n')
+                this.echo('[[;white;]' + 'cat <px>' + ']\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;#e71ebe;]' + 'Shows a CAT photo' + '] ');
+                this.echo('\n');
+                this.echo('[[u;#f44336;]' + ' ' + ']' + '[[bu;#f44336;]' + 'TERMINAL' + ']\n')
+                this.echo('[[;white;]' + 'core' + ']\t\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;#f44336;]' + 'Gives info to used core' + '] ');
+                this.echo('[[;white;]' + 'exit' + ']\t\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;#f44336;]' + 'Go to Index' + '] ');
+                this.echo('\n');
+            },
+            
+            whoami: function() {
+                this.echo('\n');
+                this.echo('\t\t\t' + '[[buo;#c41e3a;]' + '| WHOAMI? |' + ']\n')
+                this.echo('[[;white;]' + 'NickName' + ']\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;yellow;]' + '\'RU$$Y\'' + '] ');
+                this.echo('[[;white;]' + 'Actual Age' + ']\t\t' + '[[;grey;]' + '=>' + ']\t\t' + '[[;yellow;]' + 'int(' + age + ')' + '] ');
+                this.echo('\n');
+            },
+
+            language: function() {
+                this.echo('\n');
+                this.echo('<img width="250" src="https://camo.githubusercontent.com/7ead04d53ce8592a9f06deed3389f2255bf6f9962916a816d9f13b5268631295/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d70617572757373793530322673686f775f69636f6e733d74727565267468656d653d6461726b26686964655f626f726465723d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374">', {raw: true});
+                this.echo('\n');
+            },
+
+            cat: function(width) {
+                this.echo('\n');
+                this.echo('<img src="https://placekitten.com/' + width + '">', {raw: true});
+                this.echo('\n');
+            },
+
+            core: function() {
+                this.echo('\n');
+                this.echo('[[;#8eacf3;]' + 'Documentation:\t https://terminal.jcubic.pl/documentation.php' + ']');
+                this.echo('[[;#ac1ee7;]' + 'GitHub:\t\t\t https://github.com/jcubic/jquery.terminal' + ']');
+                this.echo('\n');
+            },
+
+            exit: function() {
+                window.location.replace("/");
+            },
+            
+        }, {
+            completion: true,
+            greetings: 'Hi User!!\n\nI\u0027m RU$$Y\u0027s assistant who is busy right now. How can I help you?\n\nUse the "help" command to display the help panel.\n'
+        });
+        </script>
+</body>
+</html>
