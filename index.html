@@ -14,37 +14,38 @@
     <script src='/js/terminaleffect.js'></script>
     <script src="https://unpkg.com/akar-icons-fonts"></script>
 </head>
-<body>
-    <!--TERMINAL EFFECT-->
-    <div class="console-container">
-        <span class="console-prefix pcdisplay">RU$$Y@root =>&nbsp;</span>
-        <span class="console-prefix mobiledisplay">RU$$Y =>&nbsp;</span>
-        <span class="terminaleffect" id="terminaleffect"></span>
-        <div class="console-underscore" id="console">&#95;</div>
-    </div>
-    
-    <!--MENU-->
-    <div class="menu">
-        <a href="iTerminal.html" class="menutext">Interactive Terminal</a>
-        <span class="context">BASED IN JQUERRY</span><br>
 
-        <a href="#" class="menutext" onclick="alert('Not Avaliable :(');">My Flipper Files</a>
+<!--TERMINAL EFFECT-->
+<header class="console-container">
+    <span class="console-prefix pcdisplay">RU$$Y@root =>&nbsp;</span>
+    <span class="console-prefix mobiledisplay">RU$$Y =>&nbsp;</span>
+    <span class="terminaleffect" id="terminaleffect"></span>
+    <div class="console-underscore" id="console">&#95;</div>
+</header>
+
+<body>
+    <!--MENU-->
+    <nav class="menu">
+        <a href="iTerminal.html" class="menutext">Interactive Terminal</a><br>
+        <span class="context">BASED IN JQUERRY</span><br><br>
+
+        <a href="#" class="menutext" onclick="alert('Not Avaliable :(');">My Flipper Files</a><br>
         <span class="context">SOON ONLINE</span>
-    </div>
+    </nav>
 
     <!--GOALS-->
     <hr>
-    <h3 class="header" onclick="toggleMenu('goals')">
+    <h3 class="heading" onclick="toggleMenu('goals')">
         <span class="icon">󱤧</span> 2024 Goals <i id="menuicongoals" class="ai-chevron-up"></i>
     </h3>
     <div id="goals" class="dropmenu goals">
         <p><a href="https://security.ine.com/certifications/ejpt-certification/"> eJpt</a></p>
-        <p> A1 licence</p>
+        <p class="textgradient"> A1 licence</p>
     </div>
 
     <!--NEWS-->
     <hr class="pcdisplay">
-    <h3 class="header pcdisplay" onclick="toggleMenu('newsmenu')">
+    <h3 class="heading pcdisplay" onclick="toggleMenu('newsmenu')">
         <span class="icon"></span> News <i id="menuiconnews" class="ai-chevron-up"></i>
     </h3>
     <div id="newsmenu" class="dropmenu news pcdisplay">
@@ -53,7 +54,7 @@
 
     <!--CVE-->
     <hr>
-    <h3 class="header" onclick="toggleMenu('cvemenu')">
+    <h3 class="heading" onclick="toggleMenu('cvemenu')">
         <span class="icon"></span> Last CVE <i id="menuiconcve" class="ai-chevron-up"></i>
     </h3>
     <div id="cvemenu" class="dropmenu cve">

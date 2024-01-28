@@ -11,73 +11,50 @@ html{
 
 body {
     color: white;
-    font-size: 18px;
+    font-size: 20px;
     font-family: '3270 Nerd Font Mono', 'Consolas';
     display: block;
 }
 
-.header {
-    text-align: center;
-    font-size: 1.25rem;
-    padding: 8px 15px;
-    cursor: pointer;
-    text-shadow: 0px 0px 10px rgb(200, 0, 200);
-    transition: text-shadow 0.5s;
+nav {
+    display: block;
+    text-align: left;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    width: fit-content;
 }
 
-.header:hover {
-    text-shadow: 0px 0px 5px rgb(255, 0, 255), 0px 0px 10px rgb(255, 0, 0);
+a, .textgradient {
+    text-decoration: none;
+    background-color: #aa00ff;
+    background-image: linear-gradient(90deg, #aa00ff, #2081ff);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }
 
 hr {
-    border: thin solid rgb(160, 160, 160);
-    border-radius: 5px;
+    border-color: transparent;
+    background: linear-gradient(90deg, #aa00ffb9, #2081ffb9);
+    height: 1px;
+    margin: 0px;
 }
 
-.hidden {
-    display: none;
-    opacity: 0;
+h3{
+    font-size: 1.1em;
 }
 
-.menu {
-    margin: 50px auto;
-    width: fit-content;
+.heading {
     text-align: center;
+    font-weight: normal;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.menutext, .context {
-    display: block;
-    transition: 0.5s;
-    font-size: 1.5rem;
-    text-shadow: 0px 0px 10px rgb(200, 0, 200);
-    text-align: left;
-}
-
-.menutext:hover, a:hover {
-    font-weight: bold;
-    text-shadow: 0px 0px 5px rgb(255, 0, 255), 0px 0px 10px rgb(255, 0, 0);
-}
-
-.context, .context:hover {
-    color: white;
-    text-shadow: none;
-    opacity: 0.5;
-    font-size: 18px;
-    text-align: left;
-}
-
-.icon {
-    font-weight: 100;
-    font-size: 28px;
-}
-
-.cvetitle {
-    font-size: 1.3rem;
+.context {
+    color: #505050;
+    font-size: 0.95em;
 }
 
 .dropmenu {
@@ -96,7 +73,7 @@ a {
 
 .console-container {
     display: flex;
-    height: 50px;
+    height: 25px;
     color: white;
     margin: auto;
     align-items: center;
@@ -104,7 +81,8 @@ a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding: 0 15px;
+    padding: 5px 15px;
+    font-size: 0.8em;
 }
 
 .console-underscore {
