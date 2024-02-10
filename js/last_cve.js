@@ -38,7 +38,7 @@ function procesarSolicitud(url, destinoId) {
 
                 rssFeed += `
                     <item>
-                    <p><a href="https://www.opencve.io/cve/${cveText}" target="_blank">${cveText}</a></p>
+                    <p><a href="https://www.opencve.io/cve/${cveText}" target="_blank" data-text="${cveText}">${cveText}</a></p>
                     <p>
                         Updated: ${updatedText}<br>
                         Product: ${ProductText}<br><br>
