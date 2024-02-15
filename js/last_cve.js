@@ -43,7 +43,7 @@ function procesarSolicitud(url, destinoId) {
                         Updated: ${updatedText}<br>
                         Product: ${ProductText}<br><br>
                         CVSS v3: <span style="color: ${textColor};">${cvssV3Text}</span><br><br>
-                        <span style="display: ${display}; text-align: justify;">Description: ${descText}</span>
+                        <span style="display: ${display};">Description: ${descText}</span>
                     </p>
                     </item>`;
             }
