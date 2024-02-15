@@ -33,7 +33,7 @@ function procesarSolicitud(url, destinoId) {
                     <item>
                         <h3><a href="${urlText}" data-text="${cleanedTitleText}">${cleanedTitleText}</a></h3>
                         <p class="context">${dateText} | ${categoryText}</p>
-                        <p class="newsdesc">Description: ${descText}</p>
+                        <p class="newsdesc" style="text-align: justify;">Description: ${descText}</p>
                     </item>`;
             }
 

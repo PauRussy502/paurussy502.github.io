@@ -43,7 +43,7 @@ function procesarSolicitud(url, destinoId) {
                         Updated: ${updatedText}<br>
                         Product: ${ProductText}<br><br>
                         CVSS v3: <span style="color: ${textColor};">${cvssV3Text}</span><br><br>
-                        <span class="pcdisplay">Description: ${descText}</span>
+                        <span style="display: ${display}; text-align: justify;">Description: ${descText}</span>
                     </p>
                     </item>`;
             }
@@ -62,6 +62,13 @@ function procesarSolicitud(url, destinoId) {
 const criticalurl = 'https://corsproxy.io/?' + encodeURIComponent('https://www.opencve.io/cve?cvss=critical');
 const highurl = 'https://corsproxy.io/?' + encodeURIComponent('https://www.opencve.io/cve?cvss=high');
 const mediumurl = 'https://corsproxy.io/?' + encodeURIComponent('https://www.opencve.io/cve?cvss=medium');
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    display = "none"
+}
+else {
+    display = "block"
+}
 
 procesarSolicitud(criticalurl, 'critical-cve');
 procesarSolicitud(highurl, 'high-cve');
