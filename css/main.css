@@ -30,7 +30,14 @@ a:hover::before,
 a:hover::after {
     background-image: linear-gradient(90deg, #aa00ff, #2081ff);
     background-size: 200% 200%;
-    animation: gradientEffect 1s ease infinite;
+    animation: gradientEffect 1s ease infinite 0.5s;
+}
+
+a, .textgradient {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: transparent;
 }
 
 @keyframes gradientEffect {
@@ -40,13 +47,6 @@ a:hover::after {
     100% {
         background-position: 100% 0%;
     }
-}
-
-a, .textgradient {
-    position: relative;
-    text-decoration: none;
-    display: inline-block;
-    color: transparent;
 }
 
 a::before, .textgradient::before,
@@ -61,7 +61,6 @@ a::after, .textgradient::after {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(90deg, #aa00ff, #2081ff);
-    animation: gradientEffect 1s linear infinite 1s;
 }
 
 a::after, .textgradient::after {
