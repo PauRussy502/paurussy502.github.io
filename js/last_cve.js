@@ -41,9 +41,8 @@ function procesarSolicitud(url, destinoId) {
                     <p><a href="https://www.opencve.io/cve/${cveText}" target="_blank" data-text="${cveText}">${cveText}</a></p>
                     <p>
                         Updated: ${updatedText}<br>
-                        Product: ${ProductText}<br><br>
                         CVSS v3: <span style="color: ${textColor};">${cvssV3Text}</span><br><br>
-                        <span style="display: ${display};">Description: ${descText}</span>
+                        <span style="text-align: justify; display: ${display};">${descText}</span>
                     </p>
                     </item>`;
             }

@@ -33,8 +33,9 @@ function procesarSolicitud(url, destinoId, indexnew) {
 
                 rssFeed += `
                     <item>
+                        <h2 class="newstitle">NEW ${indexnew}</h2>
                         <h3><a href="${urlText}" data-text="${cleanedTitleText}" style="margin-top: 10px;">${cleanedTitleText}</a></h3>
-                        <p class="context">${FancydateText} | ${categoryText}</p>
+                        <p class="newscontext">${FancydateText} | ${categoryText}</p>
                         <p class="newsdesc" style="text-align: justify;">${descText}</p>
                     </item>`;
             }
@@ -55,3 +56,10 @@ const newsurl = 'https://corsproxy.io/?' + encodeURIComponent('https://thehacker
 procesarSolicitud(newsurl, 'news1', '1');
 procesarSolicitud(newsurl, 'news2', '2');
 procesarSolicitud(newsurl, 'news3', '3');
+procesarSolicitud(newsurl, 'news4', '4');
+procesarSolicitud(newsurl, 'news5', '5');
+procesarSolicitud(newsurl, 'news6', '6');
+procesarSolicitud(newsurl, 'news7', '7');
+procesarSolicitud(newsurl, 'news8', '8');
+procesarSolicitud(newsurl, 'news9', '9');
+procesarSolicitud(newsurl, 'news10', '10');

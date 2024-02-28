@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="backgroundgradient">
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -27,53 +27,23 @@
 <body>
     <!--MENU-->
     <nav class="menu">
+        <a href="#">PERSONAL VULN BLOG</a><br>
+        <span class="context">VULN REPORTS [ES] [SOON ONLINE]</span><br><br><br>
+
+        <a href="news.html" class="pcdisplay">Last Cybersecurity NEWS</a>
+        <span class="pcdisplay context" style="font-size: 0.9em;"><span>Source: <a href="https://thehackernews.com/"style="font-size: 0.9em;">thehackernews.com</a></span></span><br><br>
+
+        <a href="cve.html">Lasts CVE</a>
+        <span class="pcdisplay context" style="font-size: 0.9em;"><span>Source: <a href="https://www.opencve.io/cve"style="font-size: 0.9em;">opencve.io/cve</a></span></span><br><br>
+
         <a href="iTerminal.html">Interactive Terminal</a><br>
-        <span class="context">BASED IN JQUERRY</span><br><br>
+        <span class="context">BASED IN JQUERRY</span><br><br><br>
 
         <a href="#" class="menutext" onclick="alert('Not Avaliable :(');">My Flipper Files</a><br>
         <span class="context">SOON ONLINE</span>
     </nav>
 
-    <!--GOALS-->
-    <hr>
-    <h3 class="heading" onclick="toggleMenu('goals')">
-        <span class="icon">󱤧</span> 2024 Goals <i id="menuicongoals" class="ai-chevron-up"></i>
-    </h3>
-    <div id="goals" class="dropmenu goals">
-        <p><a href="https://security.ine.com/certifications/ejpt-certification/"> eJpt</a></p>
-        <p class="textgradient"> A1 licence</p>
-    </div>
-
-    <!--NEWS-->
-    <hr class="pcdisplay">
-    <h3 class="heading pcdisplay" onclick="toggleMenu('newsmenu')">
-        <span class="icon"></span> News <i id="menuiconnews" class="ai-chevron-up"></i>
-    </h3>
-    <div id="newsmenu" class="dropmenu news pcdisplay">
-        <div id="news1"></div>
-        <div id="news2"></div>
-        <div id="news3"></div>
-    </div>
-
-    <!--CVE-->
-    <hr>
-    <h3 class="heading" onclick="toggleMenu('cvemenu')">
-        <span class="icon"></span> Last CVE <i id="menuiconcve" class="ai-chevron-up"></i>
-    </h3>
-    <div id="cvemenu" class="dropmenu cve">
-        <h3 class="cvetitle" style="color: #ff1900;">CRITICAL!!</h3>
-        <div id="critical-cve"></div><br><br>
-
-        <h3 class="cvetitle" style="color: #de5947;">HIGH!</h3>
-        <div id="high-cve"></div><br><br>
-
-        <h3 class="cvetitle" style="color: #f39c12;">MEDIUM</h3>
-        <div id="medium-cve"></div><br><br>
-    </div>
-    
     <!--END-->
-    <script src="/js/news.js"></script>
-    <script src="/js/last_cve.js"></script>
     <script src="/js/dropmenu.js"></script>
     <script src="/js/linkcontentfix.js"></script>
 </body>

@@ -1,0 +1,195 @@
+@font-face {
+    font-family: "3270 Nerd Font Mono";
+    src: url(/font/3270NerdFontMono-Regular.ttf);
+}
+
+html {
+    box-sizing: border-box;
+    background-color: #1a1a1a;
+}
+
+body {
+    color: white;
+    font-family: '3270 Nerd Font Mono', 'Consolas';
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 25px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: solid thin;
+    border-image: linear-gradient(90deg, #fb3640, #ec7a2f) 1;
+}
+
+
+h3 {
+    font-size: 23px;
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    border-top: solid thin;
+    border-bottom: solid thin;
+    border-image: linear-gradient(90deg, #fb3640, #ec7a2f) 1;
+}
+
+p {
+    line-height: 22px;
+    margin: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 16px;
+}
+
+strong{
+    color:#fb3640;
+}
+
+a:hover::before,
+a:hover::after {
+    background-image: linear-gradient(90deg, #fb3640, #ec7a2f);
+    background-size: 200% 200%;
+    animation: gradientEffect 1s ease infinite 0.5s;
+}
+
+a, .textgradient {
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    color: transparent;
+}
+
+a::before, .textgradient::before,
+a::after, .textgradient::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg, #fb3640, #ec7a2f);
+}
+
+.noundernine::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background: none;
+    z-index: 0;
+    border-radius: 2px;
+}
+
+hr {
+    border-color: transparent;
+    background: linear-gradient(90deg, #fb3640, #ec7a2f);
+    height: 1px;
+    margin: 0px;
+}
+
+.context {
+    color: #b1b1b1;
+}
+
+.pcdisplay, .mobiledisplay {
+    display: none;
+}
+
+.blog-entry {
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    row-gap: 50px;
+    
+}
+
+.blog-item {
+    display: block;
+    padding: 10px 10px;
+    max-width: 550px;
+
+    border-image: linear-gradient(90deg, #fb3640, #ec7a2f) 1;
+    border-width: thin;
+    border-style: solid;
+
+    word-wrap: break-word;
+    white-space: -moz-pre-wrap;
+    text-align: justify;
+}
+
+img {
+    display: block;
+    width: 90%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 2px;
+}
+
+.terminal {
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 1px 1px #969696 inset;
+}
+
+nav {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.blog > p {
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+h3 + p {
+    margin-top: 20px;
+}
+
+p + h3 {
+    margin-top: 40px;
+}
+
+.spacedlist{
+    margin-left: 130px;
+    margin-right: 100px;
+    text-align: justify;
+    line-height: 22px;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
