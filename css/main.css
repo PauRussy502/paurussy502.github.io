@@ -172,6 +172,10 @@ h3 + a + div > #news1 > rss > channel > item > h3 {
     display: none;
 }
 
+.mobilealerton {
+    opacity: 0.5;
+}
+
 
 ::-webkit-scrollbar {
     width: 10px;
